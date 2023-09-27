@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\senai.inLock.webApi.props" />
+</Project>

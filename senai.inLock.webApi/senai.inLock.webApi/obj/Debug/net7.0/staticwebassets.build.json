@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "OZAWvMPNgXe/FIcvH/IISC0GvHxgmDXXEOq8c57xKBg=",
+  "Source": "senai.inLock.webApi",
+  "BasePath": "_content/senai.inLock.webApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

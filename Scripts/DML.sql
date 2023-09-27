@@ -5,7 +5,7 @@ INSERT INTO dbo.TipoUsuario VALUES
 	('CLIENTE')
 
 INSERT INTO dbo.Usuario VALUES
-	(1,'admin@admin.com ','admin'),
+	(1,'admin@admin.com','admin'),
 	(2,'cliente@cliente.com','cliente')
 
 INSERT INTO dbo.Estudio VALUES

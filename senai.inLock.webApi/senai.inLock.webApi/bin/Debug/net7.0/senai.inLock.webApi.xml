@@ -1,0 +1,270 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>senai.inLock.webApi</name>
+    </assembly>
+    <members>
+        <member name="M:senai.inLock.webApi.Controllers.TipoUsuarioController.ListarTodo">
+            <summary>
+            Lista todos os TipoUsuario.
+            </summary>
+            <returns>Lista de TipoUsuario</returns>
+            <response code="200">Retorna a lista de TipoUsuario</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.TipoUsuarioController.BuscaUsuarioId(System.Int32)">
+            <summary>
+            Busca TipoUsuario através do Id passado pela URL
+            </summary>
+            <param name="id">Id utilizado para buscar TipoUsuario</param>
+            <returns>Retorna status code Ok contendo, caso contrario retorna NotFound</returns>
+            <response code="200">Encontrado TipoUsuario.</response>
+            <response code="404">TipoUsuario encontrado.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.TipoUsuarioController.Cadastro(senai.inLock.webApi.Domains.TipoUsuarioDomain)">
+             <summary>
+             Cadastra novo TipoUsuario.
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST
+                 {
+                    "titulo": "exemplo"
+                 }
+                 
+             </remarks>
+             <param name="novoTipoUsuario">Objeto contedo os dados do novo TipoUsuario</param>
+             <returns>StatusCode 201</returns>
+             <response code="201">Novo item criado</response>
+             <response code="422">Erro TipoUsuario ja existe.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.TipoUsuarioController.Delete(System.Int32)">
+            <summary>
+            Deleta um TipoUsuario do sistema
+            </summary>
+            <param name="id">Id passada como parametro para identificar um TipoUsuario a ser deletado.</param>
+            <returns>Stuscode 204 No Content</returns>
+            <response code="204">Item deletado com sucesso, sem conteudo.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.TipoUsuarioController.Atualizar(System.Int32,senai.inLock.webApi.Domains.TipoUsuarioDomain)">
+             <summary>
+             Atualiza um TipoUsuario ja registrado.
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 PUT/id
+                 {
+                    "titulo": "exemplo",     
+                 }
+                 
+             </remarks>
+             <param name="id">Id Utilizado para encontrar o TipoUsuario que sera atualizado</param>
+             <param name="tipoUsuarioAlterado">Objeto do tipo TipoUsuarioDomain</param>
+             <returns>Stuscode 204 No Content</returns>
+             <response code="204">Item altereado com sucesso, sem conteudo.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.UsuarioController.ListarTodo">
+            <summary>
+            Lista todos os Usuarios.
+            </summary>
+            <returns>Lista de Usurios</returns>
+            <response code="200">Retorna a lista de Usurios</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.UsuarioController.BuscaUsuarioId(System.Int32)">
+            <summary>
+            Busca usuario através do Id passado pela URL
+            </summary>
+            <param name="id">Id utilizado para buscar Usuario</param>
+            <returns>Retorna status code Ok contendo, caso contrario retorna NotFound</returns>
+            <response code="200">Encontrado Usurio.</response>
+            <response code="404">Usuario encontrado.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.UsuarioController.Cadastro(senai.inLock.webApi.Domains.UsuarioDomain)">
+             <summary>
+             Cadastra novo Usuario.
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST
+                 {
+                    "idTipoUsuario": Number,
+                    "email": "exemplo@exemplo.com.br",
+                    "senha": "exemplo"
+                 }
+                 
+             </remarks>
+             <param name="novoUsuario">Objeto contedo os dados do novo usuario</param>
+             <returns>StatusCode 201</returns>
+             <response code="201">Novo item criado</response>
+             <response code="422">Erro usuario ja existe.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.UsuarioController.Delete(System.Int32)">
+            <summary>
+            Deleta um usuario do sistema
+            </summary>
+            <param name="id">Id passada como parametro para identificar um usuario a ser deletado.</param>
+            <returns>Stuscode 204 No Content</returns>
+            <response code="204">Item deletado com sucesso, sem conteudo.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.UsuarioController.Atualizar(System.Int32,senai.inLock.webApi.Domains.UsuarioDomain)">
+             <summary>
+             Atualiza um Usuario ja registrado.
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 PUT/id
+                 {
+                    "idTipoUsuario": Number,
+                    "email": "exemplo@exemplo.com.br",
+                    "senha": "exemplo"
+                 }
+                 
+             </remarks>
+             <param name="id">Id Utilizado para encontrar o usuario que sera atualizado</param>
+             <param name="usuarioAlterado">Objeto do tipo UsuarioDomain</param>
+             <returns>Stuscode 204 No Content</returns>
+             <response code="204">Item altereado com sucesso, sem conteudo.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.UsuarioController.Login(senai.inLock.webApi.Domains.UsuarioDomain)">
+             <summary>
+             Efetua login no sistema
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST/Login
+                 {
+                    "email": "exemplo@exemplo.com.br",
+                    "senha": "exemplo"
+                 }
+                 
+             </remarks>
+             <param name="usuario">Objeto do tipo UsarioDomain contendo informações para o login</param>
+             <returns>Return token, caso contrario return NotFound</returns>
+             <response code="200">Efetuado login com sucesso.</response>
+             <response code="404">Usuario ou Email invalidos!</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.ITipoUsuarioRepository.ListaTodos">
+            <summary>
+            Lista todos os TipoUsuarios cadastrados.
+            </summary>
+            <returns>Lista de TipoUsuarios que estão cadastrado no bando de dados</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.ITipoUsuarioRepository.BuscaTipoUsuarioId(System.Int32)">
+            <summary>
+            Busca TipoUsuario por id
+            </summary>
+            <param name="id">Id usada para buscar o TipoUsuario</param>
+            <returns>Retorna um Objeto to tipo TipoUsuarioDomain</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.ITipoUsuarioRepository.AlterarIdUrl(System.Int32,senai.inLock.webApi.Domains.TipoUsuarioDomain)">
+            <summary>
+            Altera o TipoUsuario através da Id passada pela Url
+            </summary>
+            <param name="id">Id necessaria para identificação do TipoUsuario.</param>
+            <param name="tipoAlterado">Objeto to tipo TipoUsuarioDomain contendo as novas informações do TipoUsuario para alteração</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.ITipoUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deletar um TipoUsuario cadastrtado no sistema.
+            </summary>
+            <param name="id">Id necessaria para identificar o TipoUsuario a ser deletado.</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.ITipoUsuarioRepository.Cadastrar(senai.inLock.webApi.Domains.TipoUsuarioDomain)">
+            <summary>
+            Cadastra um novo TipoUsuario no sistema.
+            </summary>
+            <param name="novoTipoUsuario">Objeto do tipo TipoUsuarioDomain contendo os dados do novo TipoUsuario.</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IUsuarioRepository.ListaTodos">
+            <summary>
+            Lista todos os Usuarios cadastrados.
+            </summary>
+            <returns>Lista de usuarios que estão cadastrado no bando de dados</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IUsuarioRepository.BuscaUsuarioId(System.Int32)">
+            <summary>
+            Busca usuario por id
+            </summary>
+            <param name="id">Id usada para buscar o usuario</param>
+            <returns>Retorna um Objeto to tipo UsuarioDomain</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IUsuarioRepository.AlterarIdUrl(System.Int32,senai.inLock.webApi.Domains.UsuarioDomain)">
+            <summary>
+            Altera o Usuario através da Id passada pela Url
+            </summary>
+            <param name="id">Id necessaria para identificação do usuario.</param>
+            <param name="usuarioAlterado">Objeto to tipo UsuarioDomain contendo as novas informações do usuario para alteração</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IUsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deletar um usuario cadastrtado no sistema.
+            </summary>
+            <param name="id">Id necessaria para identificar o Usuario a ser deletado.</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IUsuarioRepository.Cadastrar(senai.inLock.webApi.Domains.UsuarioDomain)">
+            <summary>
+            Cadastra um novo usuario no sistema.
+            </summary>
+            <param name="novoUsuario">Objeto do tipo UsuarioDomain contendo os dados do novo Usuario.</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IUsuarioRepository.BuscaEmailSenha(System.String,System.String)">
+            <summary>
+            Busca um usuario que corresponda ao email e senha informados.
+            </summary>
+            <param name="email">Email a ser buscado</param>
+            <param name="senha">Senha a ser buscada</param>
+            <returns>Retorna um Objeto do tipo UsuarioDomain</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IUsuarioRepository.BuscaEmail(System.String)">
+            <summary>
+            Busca um usuario que corresponde ao email passado.
+            </summary>
+            <param name="email">Email a ser buscado</param>
+            <returns>retorna um objeto do tipo UsuarioDomain</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Repositories.UsuarioRepository.AlterarIdUrl(System.Int32,senai.inLock.webApi.Domains.UsuarioDomain)">
+            <summary>
+            Altera o usuario sobre o qual foi passado a ID vua URL.
+            </summary>
+            <param name="id">ID utilizada para encontrar o Usuario.</param>
+            <param name="usuarioAlterado">Objeto do tipo UsuarioDomain contendo os dados alterados.</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Repositories.UsuarioRepository.BuscaEmailSenha(System.String,System.String)">
+            <summary>
+            Busca um usuario que corresponda ao email e senha passada.
+            </summary>
+            <param name="email">Email utilizado para pesquisar usuario</param>
+            <param name="senha">Senha utilizado para pesquisar usuario</param>
+            <returns>Se o Id existir retorna um objeto do tipo UsuarioDomain chamado usuarioEncontrado, caso contrario retorna null.</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Repositories.UsuarioRepository.BuscaUsuarioId(System.Int32)">
+            <summary>
+            Busca Usuario através do Id passado pela URL
+            </summary>
+            <param name="id">ID utilizada para procurar um Usuario com a mesma Id.</param>
+            <returns>Se o Id existir retorna um objeto do tipo UsuarioDomain chamado usuarioEncontrado, caso contrario retorna null.</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Repositories.UsuarioRepository.Cadastrar(senai.inLock.webApi.Domains.UsuarioDomain)">
+            <summary>
+            Cadastra um novo usuario.
+            </summary>
+            <param name="novoUsuario">Objeto to tipo UsuarioDomain contendo dados do novo usuario.</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Repositories.UsuarioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta o Usurio que foi passado pela url.
+            </summary>
+            <param name="id">Id que identifica o usuario a ser deletado.</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Repositories.UsuarioRepository.ListaTodos">
+            <summary>
+            Lista todos os usuarios contido no sistema
+            </summary>
+            <returns>Lista de Usuario do tiipo UsuarioDomain</returns>
+        </member>
+    </members>
+</doc>
