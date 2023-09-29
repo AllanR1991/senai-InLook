@@ -91,6 +91,15 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 
+//Este código configura o middleware de localização para usar ‘pt-BR’ como a cultura padrão
+var supportedCultures = new[] { "pt-BR" };
+var localizationOptions = new RequestLocalizationOptions().SetDefaultCulture(supportedCultures[0])
+    .AddSupportedCultures(supportedCultures)
+    .AddSupportedUICultures(supportedCultures);
+
+app.UseRequestLocalization(localizationOptions);
+
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

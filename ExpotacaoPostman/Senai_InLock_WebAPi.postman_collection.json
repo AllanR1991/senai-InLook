@@ -1,0 +1,836 @@
+{
+	"info": {
+		"_postman_id": "0a155d72-5535-44da-bea2-643bd7e1b2e5",
+		"name": "Senai_InLock_WebAPi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29659999"
+	},
+	"item": [
+		{
+			"name": "Estudio.ListarTodos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTg5MTY0LCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.RaDuXv3Gp6AKurrNOmV8PUPHBOXdCdHx8uUnLqKQkpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Estudio",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Estudio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudio.Cadastrar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTg5MTY0LCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.RaDuXv3Gp6AKurrNOmV8PUPHBOXdCdHx8uUnLqKQkpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nomeEstudio\": \"Pixar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Estudio",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Estudio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudio.BuscaPorId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTg5MTY0LCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.RaDuXv3Gp6AKurrNOmV8PUPHBOXdCdHx8uUnLqKQkpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nomeEstudio\": \"Pixar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Estudio/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Estudio",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudio.Deletar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTg5MTY0LCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.RaDuXv3Gp6AKurrNOmV8PUPHBOXdCdHx8uUnLqKQkpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Estudio/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Estudio",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudio.AtualizarUrl",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTg5MTY0LCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.RaDuXv3Gp6AKurrNOmV8PUPHBOXdCdHx8uUnLqKQkpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"nomeEstudio\": \"Electronic Arts\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Estudio/6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Estudio",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jogo.ListarTodos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTg5MTY0LCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.RaDuXv3Gp6AKurrNOmV8PUPHBOXdCdHx8uUnLqKQkpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Jogo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Jogo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jogo.Cadastrar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTg5MTY0LCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.RaDuXv3Gp6AKurrNOmV8PUPHBOXdCdHx8uUnLqKQkpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"idEstudio\": 6,\r\n   \"nomeJogo\": \"FIFA 23\",\r\n   \"descricao\": \"FIFA 23 é um jogo eletrônico de simulação de futebol desenvolvido pela Electronic Arts\",\r\n   \"dataLancamento\": \"2022-09-27\",\r\n   \"valor\": 199.99        \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Jogo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Jogo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jogo.BucaPorId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTg5MTY0LCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.RaDuXv3Gp6AKurrNOmV8PUPHBOXdCdHx8uUnLqKQkpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Jogo/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Jogo",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jogo.AtualizarUrl",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTg5MTY0LCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.RaDuXv3Gp6AKurrNOmV8PUPHBOXdCdHx8uUnLqKQkpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idEstudio\": 6,\r\n    \"nomeJogo\": \"FIFA 23\",\r\n    \"descricao\": \"FIFA 23 é um jogo eletrônico de simulação de futebol desenvolvido pela Electronic Arts\",\r\n    \"dataLancamento\": \"2022-09-27\",\r\n    \"valor\": 159.99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Jogo/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Jogo",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Jogo.Deletar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTg5MTY0LCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.RaDuXv3Gp6AKurrNOmV8PUPHBOXdCdHx8uUnLqKQkpw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Jogo/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Jogo",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TipoUsuario.ListarTodos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTkwNTQyLCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.QblXp6zD4WkgNOdb9NSTq_OUqAr-c3lk-nMQHTm7RfM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/TipoUsuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"TipoUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TipoUsuario.Cadastrar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTkwNTQyLCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.QblXp6zD4WkgNOdb9NSTq_OUqAr-c3lk-nMQHTm7RfM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"titulo\": \"exemplo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/TipoUsuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"TipoUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TipoUsuario.BuscarPorId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTkwNTQyLCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.QblXp6zD4WkgNOdb9NSTq_OUqAr-c3lk-nMQHTm7RfM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/TipoUsuario/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"TipoUsuario",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TipoUsuario.AtualizarUrl",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTkwNTQyLCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.QblXp6zD4WkgNOdb9NSTq_OUqAr-c3lk-nMQHTm7RfM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"titulo\": \"exemploAlterado\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/TipoUsuario/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"TipoUsuario",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TipoUsuario.Deletar",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTkwNTQyLCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.QblXp6zD4WkgNOdb9NSTq_OUqAr-c3lk-nMQHTm7RfM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/TipoUsuario/5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"TipoUsuario",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario.Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\": \"admin@admin.com\",\r\n   \"senha\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Usuario/Login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Usuario",
+						"Login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario.ListarTodos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Usuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario.Cadastrar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"idTipoUsuario\": 1,\r\n   \"email\": \"allan@allan.com.br\",\r\n   \"senha\": \"allan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Usuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario.BuscarPorId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Usuario/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Usuario",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario.AtualizarUrl",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"idTipoUsuario\": 2,\r\n   \"email\": \"eva@eva.com.br\",\r\n   \"senha\": \"eva\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Usuario/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Usuario",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario.Deletar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7267/api/Usuario/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7267",
+					"path": [
+						"api",
+						"Usuario",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsImp0aSI6IjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBRE1JTklTVFJBRE9SIiwiZXhwIjoxNjk1OTkwNTQyLCJpc3MiOiJJbkxvY2sud2ViQXBpIiwiYXVkIjoiSW5Mb2NrLndlYkFwaSJ9.QblXp6zD4WkgNOdb9NSTq_OUqAr-c3lk-nMQHTm7RfM",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

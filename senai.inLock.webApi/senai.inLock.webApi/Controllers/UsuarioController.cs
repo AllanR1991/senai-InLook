@@ -163,29 +163,41 @@ namespace senai.inLock.webApi.Controllers
             if(usuarioEncontrado != null)
             {
                 buscaTipoUsuario = _tipoUsuarioRepository.BuscaTipoUsuarioId(usuarioEncontrado.idTipoUsuario);
+                // Primeiro, estamos criando uma lista de reivindicações (claims). 
+                // As reivindicações são informações sobre o usuário que queremos incluir no token.
                 var claims = new[]
                 {
+                    // Aqui estamos adicionando o e-mail do usuário como uma reivindicação.
                     new Claim(JwtRegisteredClaimNames.Email, usuarioEncontrado.email),
+                    // Aqui estamos adicionando o ID do usuário como uma reivindicação.
                     new Claim(JwtRegisteredClaimNames.Jti, usuarioEncontrado.idUsuario.ToString()),
+                    // Aqui estamos adicionando o papel do usuário como uma reivindicação.
                     new Claim(ClaimTypes.Role, buscaTipoUsuario.titulo)
                 };
-
+                                                                                                                                                                                                                                                                            
+                // Agora, vamos criar uma chave simétrica. 
+                // Esta chave será usada para assinar o token, garantindo que ele não seja alterado após ser emitido.
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("Senai-InLock-API-WEB-dasdg34523g"));
 
-                var creds = new SigningCredentials(key,SecurityAlgorithms.HmacSha256);
+                // Com a chave em mãos, vamos criar as credenciais de assinatura. 
+                // Estas credenciais incluem a chave e o algoritmo que será usado para assinar o token.
+                var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
+                // Finalmente, vamos criar o token. 
+                // O token incluirá as reivindicações que criamos, terá um tempo de expiração e será assinado com as credenciais de assinatura.
                 var token = new JwtSecurityToken(
-                        issuer: "InLock.webApi",
-                        audience: "InLock.webApi",
-                        claims: claims,
-                        expires: DateTime.Now.AddMinutes(30),
-                        signingCredentials: creds
+                        issuer: "InLock.webApi", // Quem está emitindo o token
+                        audience: "InLock.webApi", // Para quem o token é destinado
+                        claims: claims, // As reivindicações que incluímos anteriormente
+                        expires: DateTime.Now.AddMinutes(30), // O token expirará 30 minutos após ser emitido
+                        signingCredentials: creds // As credenciais de assinatura que criamos anteriormente
                         );
 
+                // Por fim, retornamos um objeto anônimo com o token JWT serializado.
                 return Ok(new
-                    {
-                        token = new JwtSecurityTokenHandler().WriteToken(token)
-                    });
+                {
+                    token = new JwtSecurityTokenHandler().WriteToken(token)
+                });
             }
             return NotFound();
         }

@@ -4,6 +4,133 @@
         <name>senai.inLock.webApi</name>
     </assembly>
     <members>
+        <member name="M:senai.inLock.webApi.Controllers.EstudioController.ListarTodo">
+            <summary>
+            Lista todos os Estudios.
+            </summary>
+            <returns>Lista de Estudios</returns>
+            <response code="200">Retorna a lista de Estudios</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.EstudioController.BuscaUsuarioId(System.Int32)">
+            <summary>
+            Busca estudio através do Id passado pela URL
+            </summary>
+            <param name="id">Id utilizado para buscar estudio</param>
+            <returns>Retorna status code Ok contendo, caso contrario retorna NotFound</returns>
+            <response code="200">Encontrado estudio.</response>
+            <response code="404">estudio não encontrado.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.EstudioController.Cadastro(senai.inLock.webApi.Domains.EstudioDomain)">
+             <summary>
+             Cadastra novo estudio.
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST
+                 {
+                    "nomeEstudio": "exemplo"
+                 }
+                 
+             </remarks>
+             <param name="novoEstudio">Objeto contedo os dados do novo estudio</param>
+             <returns>StatusCode 201</returns>
+             <response code="201">Novo item criado</response>
+             <response code="422">Erro estudio ja existe.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.EstudioController.Delete(System.Int32)">
+            <summary>
+            Deleta um estudio do sistema
+            </summary>
+            <param name="id">Id passada como parametro para identificar um estudio a ser deletado.</param>
+            <returns>Stuscode 204 No Content</returns>
+            <response code="204">Item deletado com sucesso, sem conteudo.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.EstudioController.Atualizar(System.Int32,senai.inLock.webApi.Domains.EstudioDomain)">
+             <summary>
+             Atualiza um estudio ja registrado.
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 PUT/id
+                 {
+                    "nomeEstudio": "exemplo"
+                 }
+                 
+             </remarks>
+             <param name="id">Id Utilizado para encontrar o estudio que sera atualizado</param>
+             <param name="estudioAlterado">Objeto do tipo EstudioDomain</param>
+             <returns>Stuscode 204 No Content</returns>
+             <response code="204">Item altereado com sucesso, sem conteudo.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.JogoController.ListarTodo">
+            <summary>
+            Lista todos os Jogo.
+            </summary>
+            <returns>Lista de Jogo</returns>
+            <response code="200">Retorna a lista de Jogo</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.JogoController.BuscaUsuarioId(System.Int32)">
+            <summary>
+            Busca Jogo através do Id passado pela URL
+            </summary>
+            <param name="id">Id utilizado para buscar Jogo</param>
+            <returns>Retorna status code Ok contendo, caso contrario retorna NotFound</returns>
+            <response code="200">Encontrado Jogo.</response>
+            <response code="404">Jogo encontrado.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.JogoController.Cadastro(senai.inLock.webApi.Domains.JogoDomain)">
+             <summary>
+             Cadastra novo Jogo.
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 POST
+                 {
+                    "idEstudio": 0,
+                    "nomeJogo": "nomeDoJogo",
+                    "descricao": "Descricao",
+                    "dataLancamento": "2023-09-28",
+                    "valor": 19.89        
+                 }
+                 
+             </remarks>
+             <param name="novoJogo">Objeto contedo os dados do novo Jogo</param>
+             <returns>StatusCode 201</returns>
+             <response code="201">Novo item criado</response>
+             <response code="422">Erro Jogo ja existe.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.JogoController.Delete(System.Int32)">
+            <summary>
+            Deleta um Jogo do sistema
+            </summary>
+            <param name="id">Id passada como parametro para identificar um Jogo a ser deletado.</param>
+            <returns>Stuscode 204 No Content</returns>
+            <response code="204">Item deletado com sucesso, sem conteudo.</response>
+        </member>
+        <member name="M:senai.inLock.webApi.Controllers.JogoController.Atualizar(System.Int32,senai.inLock.webApi.Domains.JogoDomain)">
+             <summary>
+             Atualiza um Jogo ja registrado.
+             </summary>
+             <remarks>
+             Exemplo:
+            
+                 {
+                    "idEstudio": 0,
+                    "nomeJogo": "nomeDoJogo",
+                    "descricao": "Descricao",
+                    "dataLancamento": "2023-09-28",
+                    "valor": 19.89        
+                 }
+                 
+             </remarks>
+             <param name="id">Id Utilizado para encontrar o Jogo que sera atualizado</param>
+             <param name="tipoUsuarioAlterado">Objeto do tipo JogoDomain</param>
+             <returns>Stuscode 204 No Content</returns>
+             <response code="204">Item altereado com sucesso, sem conteudo.</response>
+        </member>
         <member name="M:senai.inLock.webApi.Controllers.TipoUsuarioController.ListarTodo">
             <summary>
             Lista todos os TipoUsuario.
@@ -147,6 +274,77 @@
              <response code="200">Efetuado login com sucesso.</response>
              <response code="404">Usuario ou Email invalidos!</response>
         </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IEstudioRepository.ListaTodos">
+            <summary>
+            Lista todos os Estudio cadastrados.
+            </summary>
+            <returns>Lista de Estudio que estão cadastrado no bando de dados</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IEstudioRepository.BuscaEstudioId(System.Int32)">
+            <summary>
+            Busca estudio por id
+            </summary>
+            <param name="id">Id usada para buscar o estudio</param>
+            <returns>Retorna um Objeto to tipo EstudioDomain</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IEstudioRepository.AlterarIdUrl(System.Int32,senai.inLock.webApi.Domains.EstudioDomain)">
+            <summary>
+            Altera o estudio através da Id passada pela Url
+            </summary>
+            <param name="id">Id necessaria para identificação do estudio.</param>
+            <param name="estudioAlterado">Objeto do tipo EstudioDomain contendo as novas informações do estudio para alteração</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IEstudioRepository.Deletar(System.Int32)">
+            <summary>
+            Deletar um estudio cadastrtado no sistema.
+            </summary>
+            <param name="id">Id necessaria para identificar o estudio a ser deletado.</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IEstudioRepository.Cadastrar(senai.inLock.webApi.Domains.EstudioDomain)">
+            <summary>
+            Cadastra um novo estudio no sistema.
+            </summary>
+            <param name="novoEstudio">Objeto do tipo EstudioDomain contendo os dados do novo estudio.</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IEstudioRepository.BuscaNomeEstudio(System.String)">
+            <summary>
+            Busca um estudio que corresponde ao nomeEstudio passado.
+            </summary>
+            <param name="nomeEstudio">nomeEstudio a ser buscado</param>
+            <returns>retorna um objeto do tipo EstudioDomain</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IJogoRepository.ListaTodos">
+            <summary>
+            Lista todos os Jogo cadastrados.
+            </summary>
+            <returns>Lista de Jogo que estão cadastrado no bando de dados</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IJogoRepository.BuscaTipoUsuarioId(System.Int32)">
+            <summary>
+            Busca Jogo por id
+            </summary>
+            <param name="id">Id usada para buscar o Jogo</param>
+            <returns>Retorna um Objeto to tipo JogoDomain</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IJogoRepository.AlterarIdUrl(System.Int32,senai.inLock.webApi.Domains.JogoDomain)">
+            <summary>
+            Altera o Jogo através da Id passada pela Url
+            </summary>
+            <param name="id">Id necessaria para identificação do Jogo.</param>
+            <param name="jogoAlterado">Objeto to tipo JogoDomain contendo as novas informações do Jogo para alteração</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IJogoRepository.Deletar(System.Int32)">
+            <summary>
+            Deletar um Jogo cadastrtado no sistema.
+            </summary>
+            <param name="id">Id necessaria para identificar o Jogo a ser deletado.</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Interfaces.IJogoRepository.Cadastrar(senai.inLock.webApi.Domains.JogoDomain)">
+            <summary>
+            Cadastra um novo Jogo no sistema.
+            </summary>
+            <param name="novoJogo">Objeto do tipo JogoDomain contendo os dados do novo Jogo.</param>
+        </member>
         <member name="M:senai.inLock.webApi.Interfaces.ITipoUsuarioRepository.ListaTodos">
             <summary>
             Lista todos os TipoUsuarios cadastrados.
@@ -225,6 +423,45 @@
             </summary>
             <param name="email">Email a ser buscado</param>
             <returns>retorna um objeto do tipo UsuarioDomain</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Repositories.EstudioRepository.AlterarIdUrl(System.Int32,senai.inLock.webApi.Domains.EstudioDomain)">
+            <summary>
+            Altera o estudio sobre o qual foi passado a ID vua URL.
+            </summary>
+            <param name="id">ID utilizada para encontrar o estudio.</param>
+            <param name="estudioAlterado">Objeto do tipo EstudioDomain contendo os dados alterados.</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Repositories.EstudioRepository.BuscaEstudioId(System.Int32)">
+            <summary>
+            Busca estudio através do Id passado pela URL
+            </summary>
+            <param name="id">ID utilizada para procurar um estudio com a mesma Id.</param>
+            <returns>Se o Id existir retorna um objeto do tipo EstudioDomain chamado estudioEncontrado, caso contrario retorna null.</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Repositories.EstudioRepository.BuscaNomeEstudio(System.String)">
+            <summary>
+            Busca um estudio pelo nome
+            </summary>
+            <param name="nomeEstudio">uma string utilizada para encontrar o nome do estudio</param>
+            <returns>um objeto do tipo EstudioDomain</returns>
+        </member>
+        <member name="M:senai.inLock.webApi.Repositories.EstudioRepository.Cadastrar(senai.inLock.webApi.Domains.EstudioDomain)">
+            <summary>
+            Cadastra um novo estudio.
+            </summary>
+            <param name="novoEstudio">Objeto to tipo EstudioDomain contendo dados do novo estudio.</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Repositories.EstudioRepository.Deletar(System.Int32)">
+            <summary>
+            Deleta o Estudio que foi passado pela url.
+            </summary>
+            <param name="id">Id que identifica o estudio a ser deletado.</param>
+        </member>
+        <member name="M:senai.inLock.webApi.Repositories.EstudioRepository.ListaTodos">
+            <summary>
+            Lista todos os estudios contido no sistema
+            </summary>
+            <returns>Lista de estudio do tipo EstudioDomain</returns>
         </member>
         <member name="M:senai.inLock.webApi.Repositories.UsuarioRepository.AlterarIdUrl(System.Int32,senai.inLock.webApi.Domains.UsuarioDomain)">
             <summary>

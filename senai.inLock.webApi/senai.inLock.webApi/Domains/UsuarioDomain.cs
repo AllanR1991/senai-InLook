@@ -14,10 +14,12 @@ namespace senai.inLock.webApi.Domains
 
         [DisplayName("Email")]
         [Required(ErrorMessage = "O campo email é obrigatório.", AllowEmptyStrings = false)]
+        [DataType(DataType.EmailAddress)]
         public string email { get; set; }
 
         [DisplayName("Senha")]
         [Required(ErrorMessage = "O campo senha é obrigatório.", AllowEmptyStrings = false)]
+        [DataType(DataType.Password)]
         public string senha { get; set; }
     }
 }
