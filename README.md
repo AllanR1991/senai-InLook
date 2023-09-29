@@ -11,7 +11,11 @@ Projeto iniciado dia 25-09-2023, onde será abordado neste projeto os seguintes 
 -	Bando de dados SQL
 -	C# .net 7
 -	Swagger
+  	![scrnli_29_09_2023_10-29-50](https://github.com/AllanR1991/senai-InLook/assets/22855740/e538eb1f-7cca-4e27-821f-62f5b5e6a068)
+
 -	Postman
+	![image](https://github.com/AllanR1991/senai-InLook/assets/22855740/2888918f-2613-41e2-8639-b87133ead10d)
+
 -	JWT
 
 ## Recursos utilizados durante o desenvolvimento: 
@@ -27,7 +31,7 @@ Projeto iniciado dia 25-09-2023, onde será abordado neste projeto os seguintes 
 
 
 -	Linguagens utilizadas:
-  -	![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
+  	-	![C#](https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white)
     
 - Data Base
   
